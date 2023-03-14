@@ -1,7 +1,7 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  gh repo clone looser88/PETER-PARKER-MJ.
+  gh repo clone looser88/PETER-PARKER-MJv2
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /PETER-PARKER-BOT
