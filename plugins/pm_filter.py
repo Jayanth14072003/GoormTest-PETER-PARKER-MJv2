@@ -742,6 +742,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "tryimdb":
         async def auto_filter(client, msg, spoll=False):
+        settings = await get_settings(message.chat.id)
         message = msg
         search = message.text
         await query.answer(text=f"https://imdb.com/find?q={search}")         
