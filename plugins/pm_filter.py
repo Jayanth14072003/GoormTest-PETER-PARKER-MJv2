@@ -1268,7 +1268,10 @@ async def auto_filter(client, msg, spoll=False):
                     await asyncio.sleep(300)
                     await fuk.delete()
                     await message.delete()
-     
+        elif query.data == "tryimdb":
+
+        await query.answer(text=f"https://imdb.com/find?q={search}")
+
     if spoll:
         await msg.message.delete()
 
