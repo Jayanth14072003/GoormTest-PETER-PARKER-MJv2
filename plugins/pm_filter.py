@@ -741,7 +741,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await k.edit_text(text=f"<b>Successfully deleted {deleted} CamRip files.</b>")
 
     elif query.data == "reqinfo":
-        await query.answer(text=f"https://imdb.com/find?q={mv_rqst})
+        await query.answer(text=f"https://imdb.com/find?q={mv_rqst}")
         
     elif query.data == "pages":
         await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nᴀꜰᴛᴇʀ 05 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ\n\n❣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐀𝐋𝐄𝐗𝐀 𝐌𝐎𝐕𝐈𝐄𝐒 ", show_alert=True)
