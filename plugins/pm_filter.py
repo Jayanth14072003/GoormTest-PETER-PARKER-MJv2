@@ -742,6 +742,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "tryimdb":
         search = message.replace(" ", "+")
+        message = msg.message.reply_to_message  # msg will be callback query
+        search, files, offset, total_results = spoll
+        settings = await get_settings(message.chat.id)
         await query.answer(text=f"https://imdb.com/find?q={search}")
         
     elif query.data == "pages":
