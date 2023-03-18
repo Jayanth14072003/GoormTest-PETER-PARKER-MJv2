@@ -1301,6 +1301,8 @@ async def advantage_spell_chok(client, msg):
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
                    InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}"),
+                   InlineKeyboardButton("ᴄʜᴇᴄᴋ ɪᴍᴅʙ", url="https://imdb.com/find?q={reqst_gle}")
+        ],[
                    InlineKeyboardButton("ʀᴇᴘᴏʀᴛ ʜᴇʀᴇ", url="https://t.me/AMsupporttbot")
         ]]
         if NO_RESULTS_MSG:
