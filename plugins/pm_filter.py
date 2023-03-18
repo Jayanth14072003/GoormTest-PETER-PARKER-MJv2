@@ -194,7 +194,7 @@ async def next_page(bot, query):
     )
     btn.insert(1, 
          [
-             InlineKeyboardButton("Iɴꜰᴏ", 'reqinfo'),
+             InlineKeyboardButton("Iɴꜰᴏ", 'tryimdb'),
              InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
              InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo')
              
@@ -740,8 +740,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         deleted = str(deleted)
         await k.edit_text(text=f"<b>Successfully deleted {deleted} CamRip files.</b>")
 
-    elif query.data == "reqinfo":
-        search= message..replace(" ", "+")
+    elif query.data == "tryimdb":
+        search= message.replace(" ", "+")
         await query.answer(text=f"https://imdb.com/find?q={search}")
         
     elif query.data == "pages":
@@ -1140,7 +1140,7 @@ async def auto_filter(client, msg, spoll=False):
     )
     btn.insert(1, 
          [
-             InlineKeyboardButton("Iɴꜰᴏ", 'reqinfo'),
+             InlineKeyboardButton("Iɴꜰᴏ", 'tryimdb'),
              InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
              InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo')
              
