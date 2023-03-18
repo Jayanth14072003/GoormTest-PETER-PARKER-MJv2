@@ -1190,8 +1190,6 @@ async def auto_filter(client, msg, spoll=False):
             url=imdb['url'],
             **locals()
         )
-   
-    async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "tryimdb":
         await query.answer(text=f"https://imdb.com/find?q={search}")
