@@ -1190,6 +1190,9 @@ async def auto_filter(client, msg, spoll=False):
             url=imdb['url'],
             **locals()
         )
+    elif query.data == "tryimdb":
+        await query.answer(text=f"https://imdb.com/find?q={search}")
+
     else:
         cap = f"<b>ᴡʜᴀᴛ ɪꜱ ꜰᴏᴜɴᴅ ʏᴏᴜʀ Qᴜᴇʀʏ: {search}\n\n👤ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ : {message.from_user.mention}\n👥ɢʀᴏᴜᴘ : {message.chat.title}\n\nNᴏᴛᴇ ‣ Tʜɪs Mᴇssᴀɢᴇ Wɪʟʟ ʙᴇ Aᴜᴛᴏ-Dᴇʟᴇᴛᴇᴅ Aғᴛᴇʀ 05 Mɪɴᴜᴛᴇs.</b>"
     if imdb and imdb.get('poster'):
@@ -1268,9 +1271,6 @@ async def auto_filter(client, msg, spoll=False):
                     await asyncio.sleep(300)
                     await fuk.delete()
                     await message.delete()
-
-        elif query.data == "tryimdb":
-        await query.answer(text=f"https://imdb.com/find?q={search}")
 
     if spoll:
         await msg.message.delete()
