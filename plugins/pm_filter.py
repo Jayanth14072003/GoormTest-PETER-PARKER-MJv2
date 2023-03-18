@@ -1250,7 +1250,7 @@ async def auto_filter(client, msg, spoll=False):
                     settings = await get_settings(message.chat.id)
                     if settings['auto_delete']:
                         await asyncio.sleep(300)
-                        await fek.delete()
+                        await fek.delete(30)
                         await message.delete()
     else:
         if message.chat.id == SUPPORT_CHAT_ID:
@@ -1260,7 +1260,7 @@ async def auto_filter(client, msg, spoll=False):
             try:
                 if settings['auto_delete']:
                     await asyncio.sleep(300)
-                    await fuk.delete()
+                    await fuk.delete(10)
                     await message.delete()
             except KeyError:
                 grpid = await active_connection(str(message.from_user.id))
