@@ -741,9 +741,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await k.edit_text(text=f"<b>Successfully deleted {deleted} CamRip files.</b>")
 
     elif query.data == "tryimdb":
-        message = msg.message.reply_to_message  # msg will be callback query
-        search, files, offset, total_results = spoll
-        settings = await get_settings(message.chat.id)
+        async def auto_filter(client, msg, spoll=False):
+        search = message.text
         await query.answer(text=f"https://imdb.com/find?q={search}")         
 
     elif query.data == "pages":
